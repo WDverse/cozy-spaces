@@ -1,6 +1,6 @@
-import Location from "./Location";
-import User from "./User";
+
+const User = require("./User")
 
 
 
-modules.export = {Location, User};
+module.exports = {User};
