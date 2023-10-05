@@ -1,0 +1,23 @@
+[
+    {
+        "location":"Saint Petersburgs Apartment",
+        "price":"$250",
+        "status":"Open for Rent"
+    },  {
+        "location":"Miami Beach House",
+        "price":"$400",
+        "status":"Rented"
+    },  {
+        "location":"Santiago Home",
+        "price":"$150",
+        "status":"Rented"
+    },  {
+        "location":"Düsseldorf Riverside Lodge",
+        "price":"$80",
+        "status":"Open for Rent"
+    },  {
+        "location":"Auckland Lighthouse",
+        "price":"$75",
+        "status":"Open for Rent"
+    }
+]

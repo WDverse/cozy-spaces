@@ -3,15 +3,12 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 // Define a functional component called SignUp
-const SignUp = () => {
+const Login = () => {
     return (
         <div class="text" style={{ backgroundColor: "white" }}>
-            <h2 className="contact">Sign Up</h2>
+            <h2 className="contact">Login</h2>
 
             <Form style={{ width: "" }}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Control type="text" placeholder="Your username" required />
-                </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Control type="email" placeholder="Your email" required />
                 </Form.Group>
@@ -24,4 +21,4 @@ const SignUp = () => {
     );
 };
 // Export the SignUp component as the default export of this module
-export default SignUp;
+export default Login;

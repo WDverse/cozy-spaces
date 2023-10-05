@@ -7,12 +7,12 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Rent A Property</Navbar.Brand>
-        <p>Some Text</p>
+        <Navbar.Brand href="#home">Project Name</Navbar.Brand>
+        <p>...</p>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav variant='pills' className="me-auto">
-            <Nav.Link href="#home">Login</Nav.Link>
+            <Nav.Link href="#home" >Login</Nav.Link>
             <Nav.Link href="#link">Signup</Nav.Link>
           </Nav>
         </Navbar.Collapse>
