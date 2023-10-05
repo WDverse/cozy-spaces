@@ -5,8 +5,31 @@ const locationSchema = new Schema({
         type: String,
         required: true
     },
+    price: {
+        type: Number,
+        required: true,
+
+
+    },
     status: {
         type: Boolean,
         required: true,
     }
-})
+},
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true,
+        }
+    });
+
+locationSchema
+    .virtual('LocationStatus')
+    .get(function () {
+        return `${this.location} ${this.price} ${this.status}`;
+    })
+
+
+const Location = model('Location', locationSchema);
+
+module.exports = Location;
