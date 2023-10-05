@@ -52,18 +52,18 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-            <Form style={{ width: "" }}>
-                <Form.Group className=" form-input mb-3" controlId="exampleForm.ControlInput3">
+            <Form style={{ width: "" }} onSubmit={handleFormSubmit}>
+                <Form.Group className=" form-input mb-3" controlId="login.email">
                     <Form.Control type="email"  name="email"   value={formState.email}
                   onChange={handleChange} placeholder="Your email" required />
                 </Form.Group>
 
-                <Form.Group className="form-input mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control   name="password" tyepe ="password" placeholder="******"   value={formState.password}
+                <Form.Group className="form-input mb-3" controlId="login.password">
+                    <Form.Control   name="password" type ="password" placeholder="******"   value={formState.password}
                   onChange={handleChange} required />
 
                 </Form.Group>
-                <Button variant="dark"  type="submit" value="Submit" >Button</Button>
+                <Button variant="dark" as="input" type="submit" value="Submit"/>
             </Form>
             )}
              {error && (
