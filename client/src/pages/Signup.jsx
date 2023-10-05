@@ -5,14 +5,14 @@ import Button from "react-bootstrap/Button";
 // Define a functional component called SignUp
 const SignUp = () => {
     return (
-        <div class="text" style={{ backgroundColor: "white" }}>
-            <h2 className="contact">Sign Up</h2>
+        <div style={{ backgroundColor: "white" }}>
+            <h2>Sign Up</h2>
 
             <Form style={{ width: "" }}>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Control type="text" placeholder="Your username" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                     <Form.Control type="email" placeholder="Your email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
