@@ -5,9 +5,9 @@ const locationSchema = new Schema({
         type: String,
         required: true
     },
-    price:{
+    price: {
         type: Number,
-        required :true,
+        required: true,
 
 
     },
@@ -26,7 +26,7 @@ const locationSchema = new Schema({
 locationSchema
     .virtual('LocationStatus')
     .get(function () {
-        return `${this.location} ${this.status}`;
+        return `${this.location} ${this.price} ${this.status}`;
     })
 
 
