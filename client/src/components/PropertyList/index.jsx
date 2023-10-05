@@ -12,7 +12,7 @@ const PropertyList = () => {
             <h2 style={{ width: "100%" }}>Cool Heading</h2>
             <Col>
                 <Card>
-                    <Card.Img variant="top" height={""} />
+                    <Card.Img src = "" variant="top" height={""} />
                     <Card.Body>
                         <Card.Title>Title</Card.Title>
                         <Card.Text className="project-text">Description</Card.Text>

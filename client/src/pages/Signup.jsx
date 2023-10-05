@@ -16,7 +16,7 @@ const SignUp = () => {
                     <Form.Control type="email" placeholder="Your email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control  tyepe ="password" placeholder="******" required />
+                    <Form.Control  type ="password" placeholder="******" required />
                 </Form.Group>
                 <Button variant="dark" as="input" type="submit" value="Submit" />{" "}
             </Form>
