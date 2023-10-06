@@ -17,7 +17,7 @@ const PropertyList = () => {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Your Cart</Modal.Title>
+          <Modal.Title>Your Booking</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Card style={{ width: "18rem" }}>
@@ -40,7 +40,7 @@ const PropertyList = () => {
 
       {/* // Row with responsive column layout */}
       <Row xs={1} sm={2} md={2} lg={4} className="g-4">
-        <h2 style={{ width: "100%" }}>Cool Heading</h2>
+        <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
         <Col>
           <Card>
             <Card.Img src="" variant="top" height={""} />
@@ -48,7 +48,7 @@ const PropertyList = () => {
               <Card.Title>Title</Card.Title>
               <Card.Text className="project-text">Description</Card.Text>
               <Button variant="dark" onClick={handleShow}>
-                Add to cart{" "}
+                Book this space{" "}
               </Button>
             </Card.Body>
           </Card>
@@ -60,7 +60,7 @@ const PropertyList = () => {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>Add to cart </Button>
+              <Button variant="dark" onClick={handleShow}>Book this space </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -71,7 +71,7 @@ const PropertyList = () => {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>Add to cart </Button>
+              <Button variant="dark" onClick={handleShow}>Book this space </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -82,7 +82,7 @@ const PropertyList = () => {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>Add to cart </Button>
+              <Button variant="dark" onClick={handleShow}>Book this space </Button>
             </Card.Body>
           </Card>
         </Col>
