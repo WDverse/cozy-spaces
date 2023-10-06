@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
             {Auth.loggedIn() ? (
               <>
-                <Link>{Auth.getProfile().data.username}'s account</Link>
+                <Link><Nav.Link>{Auth.getProfile().data.username}'s account</Nav.Link></Link>
                 <Nav.Link onClick={logout}> Logout</Nav.Link>
               </>
             ) : (
