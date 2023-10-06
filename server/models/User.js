@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-import Location from "./Location";
+//import Location from "./Location";
 
 const userSchema = new Schema({
   username: {
