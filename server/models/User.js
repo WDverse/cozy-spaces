@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+import Location from "./Location";
 
 const userSchema = new Schema({
   username: {
@@ -19,7 +20,10 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  
+  locations: [
+    { type: String },
+  ]
+
 });
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {

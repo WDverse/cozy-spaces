@@ -17,8 +17,15 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+    
+    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.2.1"
+
+=======
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1"
+>>>>>>> f9e4b50b8088f578d1e0a23b3141b8a20807a83d
   },
   "scripts": {
     "start": "react-scripts start",

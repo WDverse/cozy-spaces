@@ -1,11 +1,12 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Location } = require('../models');
+
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return  User.find({});
+      return User.find({});
     },
 
     user: async (parent, { userId }) => {
@@ -18,13 +19,13 @@ const resolvers = {
       // Create and return the new School object
       const user = await User.create({ username, email, password });
       const token = signToken(user);
-      return {token, user};
+      return { token, user };
     },
 
-    login: async(parent,{email, password}) => {
-      const user = await User.findOne({email});
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
-      if(!user) {
+      if (!user) {
         throw new AuthenticationError('No profile with this email found');
       }
 
@@ -32,10 +33,18 @@ const resolvers = {
       if (!correctPw) {
         throw new AuthenticationError('incorrect Password');
       }
-      const token =signToken(user);
-      return {token, user};
+      const token = signToken(user);
+      return { token, user };
     },
-
+    addLocation: async (parent, { userId }, { location }) => {
+      return User.findOneAndUpdate({ _id: userId },
+        { $addToSet: { locations: location } })
+    },
+    removeLocation: async (parent, { userId }, { location }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
+        { $pull: { locations: location } });
+    },
     removeUser: async (parent, { userId }) => {
       return User.findOneAndDelete({ _id: userId });
     },
