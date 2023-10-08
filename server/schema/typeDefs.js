@@ -32,6 +32,7 @@ type Mutation {
     removeUser(userId: ID!): User
     addLocation(location: LocationInput): Location
     removeLocation(locationId: ID!): Location
+    searchLocation(location: String!): [Location]
 }`;
 
 module.exports = typeDefs
