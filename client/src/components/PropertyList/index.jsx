@@ -1,17 +1,23 @@
 // Importing necessary components and styles
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import beachHouse from "../../assets/images/beachHouse.jpg";
+import Auth from "../../utils/auth";
+import { propertyInfo } from "../../propertyInfo";
 
 // Define a functional component called PropertyList
 const PropertyList = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // if (!locations.length) {
+  //   return <h2>No Bookings Yet</h2>;
+  // }
 
   return (
     <>
@@ -21,10 +27,10 @@ const PropertyList = () => {
         </Modal.Header>
         <Modal.Body>
           <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={beachHouse} />
+            <Card.Img variant="top" src="" />
             <Card.Body>
               <Card.Title>Property Name</Card.Title>
-              <Card.Text>Description</Card.Text>
+              <Card.Text>Price</Card.Text>
             </Card.Body>
           </Card>
         </Modal.Body>
@@ -39,54 +45,60 @@ const PropertyList = () => {
       </Modal>
 
       {/* // Row with responsive column layout */}
-      <Row xs={1} sm={2} md={2} lg={4} className="g-4">
-        <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
-        <Col>
-          <Card>
-            <Card.Img src="" variant="top" height={""} />
-            <Card.Body>
-              <Card.Title>Title</Card.Title>
-              <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>
-                Book this space{" "}
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card>
-            <Card.Img variant="top" height={""} />
-            <Card.Body>
-              <Card.Title>Title</Card.Title>
-              <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>Book this space </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card>
-            <Card.Img variant="top" height={""} />
-            <Card.Body>
-              <Card.Title>Title</Card.Title>
-              <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>Book this space </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card>
-            <Card.Img variant="top" height={""} />
-            <Card.Body>
-              <Card.Title>Title</Card.Title>
-              <Card.Text className="project-text">Description</Card.Text>
-              <Button variant="dark" onClick={handleShow}>Book this space </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      {Auth.loggedIn() ? (
+        <>
+          <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
+          <Row xs={1} sm={2} md={2} lg={4} className="g-4">
+            {propertyInfo &&
+              propertyInfo.map((user, i) => (
+                <Col key={i}>
+                  <Card>
+                    <Card.Img
+                      src={propertyInfo[i].image}
+                      variant="top"
+                      height={"300"}
+                    />
+                    <Card.Body>
+                      <Card.Title>{propertyInfo[i].location}</Card.Title>
+                      <Card.Text>Price: {propertyInfo[i].price}</Card.Text>
+                      <Card.Text>Status: {propertyInfo[i].status}</Card.Text>
+                      <Button variant="dark" onClick={handleShow}>
+                        Book this space{" "}
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+          </Row>
+        </>
+      ) : (
+        <>
+          <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
+          <p style={{ width: "100%" }}>
+            You can only view spaces now. To book a space, please{" "}
+            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          </p>
+          <Row xs={1} sm={2} md={2} lg={4} className="g-4">
+            {propertyInfo &&
+              propertyInfo.map((user, i) => (
+                <Col key={propertyInfo[i].id}>
+                  <Card>
+                    <Card.Img
+                      src={propertyInfo[i].image}
+                      variant="top"
+                      height={"300"}
+                    />
+                    <Card.Body>
+                      <Card.Title>{propertyInfo[i].location}</Card.Title>
+                      <Card.Text>Price: {propertyInfo[i].price}</Card.Text>
+                      <Card.Text>Status: {propertyInfo[i].status}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+          </Row>
+        </>
+      )}
     </>
   );
 };
