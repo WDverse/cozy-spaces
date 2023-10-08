@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import Propertylist from "./components/PropertyList";
+import Footer from "./components/Footer";
 
 
 const httpLink = createHttpLink({
@@ -56,7 +57,7 @@ function App() {
               />
             </Routes>
           </div>
-          
+          <Footer/>
         </div>
       </Router>
     </ApolloProvider>
