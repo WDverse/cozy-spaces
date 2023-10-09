@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import Propertylist from "./components/PropertyList";
+import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
 
 
@@ -54,6 +55,10 @@ function App() {
               <Route 
                 path="/signup" 
                 element={ <SignUp />} 
+              />
+              <Route 
+                path="/me" 
+                element={ <Profile />} 
               />
             </Routes>
           </div>
