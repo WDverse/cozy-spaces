@@ -37,18 +37,26 @@ const resolvers = {
       return { token, user };
     },
     addLocation: async (parent, { userId }, { location }) => {
-      return User.findOneAndUpdate({ _id: userId },
+      return await User.findOneAndUpdate({ _id: userId },
         { $addToSet: { locations: location } })
     },
     removeLocation: async (parent, {locationId }, { location }) => {
-      const removedLoc = Location.findOneAndDelete({_id: locationId});
+      const removedLoc = await Location.findOneAndDelete({_id: locationId});
       return removedLoc;
       // return User.findOneAndUpdate(
       //   { _id: userId },
       //   { $pull: { locations: location } });
     },
+    searchLocation: async(parent, {location}) =>{
+      console.log(location)
+      return await Location.find({
+        location
+      })
+    },
+
+
     removeUser: async (parent, { userId }) => {
-      return User.findOneAndDelete({ _id: userId });
+      return await User.findOneAndDelete({ _id: userId });
     },
   },
 };
