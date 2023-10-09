@@ -14,7 +14,11 @@ const PropertyList = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const [currentInfo, setCurrentInfo] = useState({
+    image: propertyInfo[0].image,
+    location: propertyInfo[0].location,
+    price: propertyInfo[0].price,
+  });
   // if (!locations.length) {
   //   return <h2>No Bookings Yet</h2>;
   // }
@@ -27,10 +31,10 @@ const PropertyList = () => {
         </Modal.Header>
         <Modal.Body>
           <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="" />
+            <Card.Img  height={"200"} variant="top" src={currentInfo.image} />
             <Card.Body>
-              <Card.Title>Property Name</Card.Title>
-              <Card.Text>Price</Card.Text>
+              <Card.Title>{currentInfo.location}</Card.Title>
+              <Card.Text>{currentInfo.price}</Card.Text>
             </Card.Body>
           </Card>
         </Modal.Body>
@@ -52,17 +56,21 @@ const PropertyList = () => {
             {propertyInfo &&
               propertyInfo.map((user, i) => (
                 <Col key={i}>
-                  <Card>
+                  <Card className="shadow mb-5 bg-body rounded">
                     <Card.Img
                       src={propertyInfo[i].image}
                       variant="top"
-                      height={"300"}
+                      height={"230"}
                     />
                     <Card.Body>
                       <Card.Title>{propertyInfo[i].location}</Card.Title>
                       <Card.Text>Price: {propertyInfo[i].price}</Card.Text>
                       <Card.Text>Status: {propertyInfo[i].status}</Card.Text>
-                      <Button variant="dark" onClick={handleShow}>
+                      <Button variant="dark" onClick={()=> {handleShow(); setCurrentInfo({
+                        image: propertyInfo[i].image, 
+                        location: propertyInfo[i].location, 
+                        price: propertyInfo[i].price
+                      })}}>
                         Book this space{" "}
                       </Button>
                     </Card.Body>
