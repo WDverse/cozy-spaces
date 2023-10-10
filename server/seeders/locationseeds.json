@@ -1,23 +1,47 @@
 [
     {
-        "location":"Saint Petersburgs Apartment",
-        "price":250,
-        "status":"Open for Rent"
-    },  {
-        "location":"Miami Beach House",
-        "price":400,
-        "status":"Rented"
-    },  {
-        "location":"Santiago Home",
-        "price":150,
-        "status":"Rented"
-    },  {
-        "location":"Düsseldorf Riverside Lodge",
-        "price":80,
-        "status":"Open for Rent"
-    },  {
-        "location":"Auckland Lighthouse",
-        "price":75,
-        "status":"Open for Rent"
+        "location": "Saint Petersburgs Apartment",
+        "price": 250,
+        "status": "Open for Rent"
+    },
+    {
+        "location": "Miami Beach House",
+        "price": 400,
+        "status": "Rented"
+    },
+    {
+        "location": "Santiago Home",
+        "price": 150,
+        "status": "Rented"
+    },
+    {
+        "location": "Düsseldorf Riverside Lodge",
+        "price": 80,
+        "status": "Open for Rent"
+    },
+    {
+        "location": "Auckland Lighthouse",
+        "price": 75,
+        "status": "Open for Rent"
+    },
+    {
+        "location": "Ontario Fishhut",
+        "price": 60,
+        "status": "Open for Rent"
+    },
+    {
+        "location": "Texas Ranch",
+        "price": 1000,
+        "status": "Open for Rent"
+    },
+    {
+        "location": "New York Apartment",
+        "price": 200,
+        "status": "Open for Rent"
+    },
+    {
+        "location": "Antartic Research Station",
+        "price": 750,
+        "status": "Rented"
     }
 ]
