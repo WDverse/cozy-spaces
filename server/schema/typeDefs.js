@@ -1,9 +1,11 @@
 const { gql } = require('apollo-server-express');
-
+//Describes the data of our graphQL API
 const typeDefs = gql`
-type Location {
+type Location { 
     _id: ID!
     location: String
+    price : Int
+    status: String
 }
 input LocationInput {    
     location: String    
@@ -13,6 +15,7 @@ type User{
     username: String
     email: String
     password: String
+    locations : [location]
 }
 
 type Auth {
