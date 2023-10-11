@@ -1,4 +1,4 @@
- const express = require('express');
+const express = require('express');
 // Import the ApolloServer class
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
@@ -8,7 +8,7 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; //sets options for the port.
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -30,15 +30,15 @@ app.get('/', (req, res) => {
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {
-await server.start();
-server.applyMiddleware({ app });
+  await server.start();
+  server.applyMiddleware({ app });
 
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+  db.once('open', () => { //prints to the console which ports are in use. 
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    })
   })
-})
 };
 
 // Call the async function to start the server
