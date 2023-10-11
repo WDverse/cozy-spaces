@@ -26,3 +26,5 @@ Please send any questions you have to [sjkteel@gmail.com](sjkteel@gmail.com).
 - [AucklandLighthouse](https://www.pexels.com/photo/wooden-steps-to-lighthouse-in-evening-4061436/)
 - [MiamiBeachhouse](https://www.pexels.com/photo/white-concrete-building-near-green-tree-3665354/)
 - [SantiagoHome](https://www.pexels.com/photo/city-people-street-hotel-16157578/)
+- [TexasRanch](https://www.pexels.com/photo/agriculture-barn-clouds-cloudy-206768/)
+- [NewYorkApartment](https://www.pexels.com/photo/city-street-and-apartments-facade-in-brooklyn-new-york-usa-6408235/)

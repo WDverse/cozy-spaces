@@ -25,11 +25,6 @@
         "status": "Open for Rent"
     },
     {
-        "location": "Ontario Fishhut",
-        "price": 60,
-        "status": "Open for Rent"
-    },
-    {
         "location": "Texas Ranch",
         "price": 1000,
         "status": "Open for Rent"
@@ -40,7 +35,7 @@
         "status": "Open for Rent"
     },
     {
-        "location": "Antartic Research Station",
+        "location": "Maldives Bungalows",
         "price": 750,
         "status": "Rented"
     }
