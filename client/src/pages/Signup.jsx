@@ -3,8 +3,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import Landing from "./Landing";
 import { useMutation } from '@apollo/client';
+
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
@@ -72,6 +73,7 @@ const SignUp = () => {
                 {error.message}
               </div>
             )}
+            <Landing/>
         </div>
     );
 };
