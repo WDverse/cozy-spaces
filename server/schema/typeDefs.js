@@ -15,7 +15,7 @@ type User{
     username: String
     email: String
     password: String
-    locations : [location]
+    locations : [Location]
 }
 
 type Auth {
