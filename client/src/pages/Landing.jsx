@@ -44,7 +44,7 @@ export default function Landing () {
       return (
         <div className = "main" ref={about}>
         <h1>Experience </h1>
-    <h1> Luxury<span>Reserve Now</span> Beyond</h1>
+    <h1> Luxury<button>Reserve Now</button> Beyond</h1>
     <h1>Imagination </h1>
     <img className="left-img" src="https://images.unsplash.com/photo-1694612114830-f8fb3646f33e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dG91cmlzdCUyMGNpdHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" />
     <img className="right-img" src="https://images.unsplash.com/photo-1649604340292-59b2d63d9377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG91cmlzdCUyMGNpdHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" />
@@ -53,4 +53,4 @@ export default function Landing () {
      </div>
       );
     }
-    module.export = Landing
+  

@@ -29,7 +29,7 @@ code {
   z-index: 9;
 
 }
-.main span {
+.main button {
 background-color: brown;
 font-size: 25px;
 padding: 20px 40px;
