@@ -2,7 +2,7 @@ import React from "react";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
+import "../styles/Landing.css"
 export default function Landing() {
   const about = useRef(null);
   const tl = gsap.timeline();
