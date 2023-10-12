@@ -90,7 +90,7 @@ const PropertyList = () => {
             {propertyInfo &&
               propertyInfo.map((user, i) => (
                 <Col key={propertyInfo[i].id}>
-                  <Card>
+                  <Card className="shadow mb-5 bg-body rounded">
                     <Card.Img
                       src={propertyInfo[i].image}
                       variant="top"

@@ -1,10 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Auth from "../../utils/auth";
 
 const Header = () => {
+  const location = useLocation();
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -12,15 +14,16 @@ const Header = () => {
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
+      {location.pathname !== "/" &&(
       <Container>
         <Navbar.Brand href="#home">Cozy Spaces</Navbar.Brand>
         <p></p>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav variant="pills" className="me-auto">
-            <Link to="/">
+            <Link to="/spaces">
               {" "}
-              <Nav.Link href="#home">Home</Nav.Link>{" "}
+              <Nav.Link href="#home">Our Spaces</Nav.Link>{" "}
             </Link>
             {Auth.loggedIn() ? (
               <>
@@ -44,6 +47,8 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      )
+      }
     </Navbar>
   );
 };
