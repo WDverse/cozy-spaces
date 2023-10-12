@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Propertylist from "./components/PropertyList";
 import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
+import Landing from "./pages/Landing";
 
 
 const httpLink = createHttpLink({
@@ -46,6 +47,11 @@ function App() {
             <Routes>
             <Route 
                 path="/" 
+                element={<Landing />} 
+              />
+
+            <Route 
+                path="/spaces" 
                 element={<Propertylist />} 
               />
               <Route 
