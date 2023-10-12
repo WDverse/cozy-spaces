@@ -40,7 +40,7 @@ const SignUp = () => {
       console.error(e);
     }
   };
-  return (
+  return ( //returns html components
     <div>
       <div className="box">
         <div className="circle"></div>

@@ -42,7 +42,7 @@ const Login = (props) => {
       password: "",
     });
   };
-  return (
+  return (//returns html components
     <div>
       <div className="box">
         <div className="circle"></div>

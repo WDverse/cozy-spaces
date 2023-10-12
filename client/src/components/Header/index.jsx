@@ -13,7 +13,7 @@ const Header = () => { //creates react component for header
     Auth.logout();
   };
 
-  return (
+  return ( //returns html components
     <div>
       {location.pathname !== "/" && (
         <Navbar expand="lg" className="bg-body-secondary">
