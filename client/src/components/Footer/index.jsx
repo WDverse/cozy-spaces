@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../../styles/Footer.css";
 
 const Footer = () => {
   const location = useLocation();
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="container text-center mb-2">
         {location.pathname !== "/" && (
           <>
-          <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
+          <button className="btn btn-dark mb-3 footerBtn" onClick={() => navigate(-1)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

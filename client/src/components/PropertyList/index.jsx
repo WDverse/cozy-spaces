@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Auth from "../../utils/auth";
 import { propertyInfo } from "../../propertyInfo";
+import "../../styles/Property.css";
 
 // Define a functional component called PropertyList
 const PropertyList = () => {
@@ -41,12 +42,12 @@ const PropertyList = () => {
           </Card>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className="closeBtn" variant="danger" onClick={handleClose}>
             Close
           </Button>
-          <a className="btn-primary" href={currentInfo.stripeLink}>
+          <a href={currentInfo.stripeLink}>
             {" "}
-            <Button variant="primary">Checkout</Button>
+            <Button className="chkout-button" variant="primary">Checkout</Button>
           </a>
         </Modal.Footer>
       </Modal>
@@ -70,6 +71,7 @@ const PropertyList = () => {
                       <Card.Text>Price: {propertyInfo[i].price}</Card.Text>
                       <Card.Text>Status: {propertyInfo[i].status}</Card.Text>
                       <Button
+                      className="prop-buttons"
                         variant="dark"
                         onClick={() => {
                           handleShow();
@@ -92,9 +94,9 @@ const PropertyList = () => {
       ) : (
         <>
           <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
-          <p style={{ width: "100%" }}>
+          <p className="para" style={{ width: "100%" }}>
             You can only view spaces now. To book a space, please{" "}
-            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+            <Link className="prop-link" to="/login">login</Link> or <Link className="prop-link" to="/signup">signup.</Link>
           </p>
           <Row xs={1} sm={2} md={2} lg={4} className="g-4">
             {propertyInfo &&
