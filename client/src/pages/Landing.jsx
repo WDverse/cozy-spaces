@@ -2,8 +2,8 @@ import React from "react";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
-export default function Landing() { // Export the Landing component as the default export of this module
+import "../styles/Landing.css"
+export default function Landing() {
   const about = useRef(null);
   const tl = gsap.timeline();
 
