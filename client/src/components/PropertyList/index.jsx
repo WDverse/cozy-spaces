@@ -18,7 +18,9 @@ const PropertyList = () => {
     image: propertyInfo[0].image,
     location: propertyInfo[0].location,
     price: propertyInfo[0].price,
+    stripeLink: propertyInfo[0].stripeLink,
   });
+  console.log(propertyInfo);
   // if (!locations.length) {
   //   return <h2>No Bookings Yet</h2>;
   // }
@@ -31,7 +33,7 @@ const PropertyList = () => {
         </Modal.Header>
         <Modal.Body>
           <Card style={{ width: "18rem" }}>
-            <Card.Img  height={"200"} variant="top" src={currentInfo.image} />
+            <Card.Img height={"200"} variant="top" src={currentInfo.image} />
             <Card.Body>
               <Card.Title>{currentInfo.location}</Card.Title>
               <Card.Text>{currentInfo.price}</Card.Text>
@@ -42,9 +44,10 @@ const PropertyList = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Checkout
-          </Button>
+          <a className="btn-primary" href={currentInfo.stripeLink}>
+            {" "}
+            <Button variant="primary">Checkout</Button>
+          </a>
         </Modal.Footer>
       </Modal>
 
@@ -66,11 +69,18 @@ const PropertyList = () => {
                       <Card.Title>{propertyInfo[i].location}</Card.Title>
                       <Card.Text>Price: {propertyInfo[i].price}</Card.Text>
                       <Card.Text>Status: {propertyInfo[i].status}</Card.Text>
-                      <Button variant="dark" onClick={()=> {handleShow(); setCurrentInfo({
-                        image: propertyInfo[i].image, 
-                        location: propertyInfo[i].location, 
-                        price: propertyInfo[i].price
-                      })}}>
+                      <Button
+                        variant="dark"
+                        onClick={() => {
+                          handleShow();
+                          setCurrentInfo({
+                            image: propertyInfo[i].image,
+                            location: propertyInfo[i].location,
+                            price: propertyInfo[i].price,
+                            stripeLink: propertyInfo[i].stripeLink,
+                          });
+                        }}
+                      >
                         Book this space{" "}
                       </Button>
                     </Card.Body>
