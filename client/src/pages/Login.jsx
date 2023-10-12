@@ -43,7 +43,7 @@ const Login = (props) => {
         password: '',
       });
     };
-    return (
+    return (//returns html and react components 
         <div style={{ backgroundColor: "white" }}>
             <h2>Login</h2>
             {data ? (

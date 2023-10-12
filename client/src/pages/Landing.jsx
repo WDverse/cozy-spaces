@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function Landing() {
+export default function Landing() { // Export the Landing component as the default export of this module
   const about = useRef(null);
   const tl = gsap.timeline();
 
@@ -34,7 +34,7 @@ export default function Landing() {
 
     return () => ctx.revert();
   }, []);
-  return (
+  return ( //returns html and react components
     <div className="main" ref={about}>
       <h1>Experience </h1>
       <h1>

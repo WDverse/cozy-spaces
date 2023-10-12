@@ -1,12 +1,12 @@
 import React from 'react';
 
-const OrderList = () => {
+const OrderList = () => { // creates a react component for an ordered list.
 
-    return(
+    return (//returns html components
         <>
         </>
     )
 
 }
-
-export default OrderList;
+// Export the OrderList component as the default export of this module
+export default OrderList; 

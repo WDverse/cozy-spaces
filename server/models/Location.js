@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
-
-const locationSchema = new Schema({
+// requires tool from mongoose.
+const locationSchema = new Schema({ //creates a schema for location data
     location: {
         type: String,
         required: true
@@ -31,5 +31,5 @@ locationSchema
 
 
 const Location = model('Location', locationSchema);
-
+//exports the Location Schema.
 module.exports = Location;

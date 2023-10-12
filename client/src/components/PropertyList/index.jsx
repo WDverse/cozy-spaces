@@ -23,7 +23,7 @@ const PropertyList = () => {
   //   return <h2>No Bookings Yet</h2>;
   // }
 
-  return (
+  return (//returns html and react components 
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

@@ -40,7 +40,7 @@ const SignUp = () => {
           console.error(e);
         }
       };
-    return (
+    return ( //returns html and react components
         <div style={{ backgroundColor: "white" }}>
             <h2>Sign Up</h2>
             {data ? (

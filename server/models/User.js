@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-//import Location from "./Location";
+//requires tools from mongoose and bcrypt packages.
 
-const userSchema = new Schema({
+const userSchema = new Schema({ //creates a schema for the user model data.
   username: {
     type: String,
     required: true,
@@ -25,7 +25,7 @@ const userSchema = new Schema({
   ]
 
 });
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (next) { //bcrypt hashes password.
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -40,5 +40,5 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 const User = model('User', userSchema);
-
+//exports the user schema as User. 
 module.exports = User;
