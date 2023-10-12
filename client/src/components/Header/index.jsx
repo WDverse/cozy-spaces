@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Auth from "../../utils/auth";
-//imports react packages and user authorization
+import "../../styles/Header.css";
 
 const Header = () => { //creates react component for header
   const location = useLocation();
@@ -13,44 +13,70 @@ const Header = () => { //creates react component for header
     Auth.logout();
   };
 
-  return ( //returns html and react components
-    <Navbar expand="lg" className="bg-body-tertiary">
+  return (
+    <div>
       {location.pathname !== "/" && (
-        <Container>
-          <Navbar.Brand href="#home">Cozy Spaces</Navbar.Brand>
-          <p></p>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav variant="pills" className="me-auto">
-              <Link to="/spaces">
-                {" "}
-                <Nav.Link href="#home">Our Spaces</Nav.Link>{" "}
-              </Link>
-              {Auth.loggedIn() ? (
-                <>
-                  <Nav.Link>
-                    <Link to="/me">{Auth.getProfile().data.username}'s account</Link>
-                  </Nav.Link>
-                  <Nav.Link onClick={logout}> Logout</Nav.Link>
-                </>
-              ) : (
-                <>
-                  <Link to="/login">
+        <Navbar expand="lg" className="bg-body-secondary">
+          <Container>
+            <Navbar.Brand className="brand" href="#logo">
+              Cozy Spaces
+            </Navbar.Brand>
+            <p></p>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav variant="pills" className="me-auto navLinks">
+                
+                  <Link className="navLink" to="/spaces">
                     {" "}
-                    <Nav.Link href="#login">Login</Nav.Link>{" "}
+                    <Nav.Item>
+                    <Nav.Link className="navLink" href="#spaces">
+                      Our Spaces
+                    </Nav.Link>{" "}
+                    </Nav.Item>
                   </Link>
-                  <Link to="/signup">
-                    {" "}
-                    <Nav.Link href="#signup">Signup</Nav.Link>{" "}
-                  </Link>
-                </>
-              )}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      )
-      }
-    </Navbar>
+                {Auth.loggedIn() ? (
+                  <>
+                    
+                      <Nav.Item>
+                      <Nav.Link>
+                        <Link children="nav-link.active" to="/me">
+                          {Auth.getProfile().data.username}'s account
+                        </Link>
+                      </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link className="navLink" onClick={logout}>
+                        {" "}
+                        Logout
+                      </Nav.Link>
+                    </Nav.Item>
+                  </>
+                ) : (
+                  <>
+                      <Link className="navLink" to="/login">
+                    <Nav.Item>
+                        {" "}
+                        <Nav.Link className="navLink" href="#login">
+                          Login
+                        </Nav.Link>{" "}
+                    </Nav.Item>
+                      </Link>
+                      <Link className="navLink" to="/signup">
+                    <Nav.Item>
+                        {" "}
+                        <Nav.Link className="navLink" href="#signup">
+                          Signup
+                        </Nav.Link>{" "}
+                    </Nav.Item>
+                      </Link>
+                  </>
+                )}
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      )}
+    </div>
   );
 };
 // Export the Header component as the default export of this module

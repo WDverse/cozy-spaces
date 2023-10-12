@@ -1,0 +1,40 @@
+
+h2{
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    
+}
+
+.para{
+    margin-bottom: 30px;
+}
+
+.prop-link{
+    text-decoration: underline !important;
+    color: #9f5500 !important;
+}
+
+.card-body{
+    background-color: #d4edfc;
+}
+
+.prop-buttons{
+    width: fit-content !important;
+    background-color: #e48111 !important;
+    border: none !important;
+    color: black !important;
+}
+.prop-buttons:hover{
+    background-color: #f0a44d !important;
+}
+.prop-buttons:active{
+    background-color: #f3b46d !important;
+}
+.closeBtn{
+    width: fit-content !important;
+
+}
+
+
+
+
