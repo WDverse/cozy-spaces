@@ -27,7 +27,7 @@ const PropertyList = () => {
   // }
 
   return (
-    <>
+    <div className="container">
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Your Booking</Modal.Title>
@@ -54,7 +54,7 @@ const PropertyList = () => {
 
       {/* // Row with responsive column layout */}
       {Auth.loggedIn() ? (
-        <>
+        <div className="spacesList">
           <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
           <Row xs={1} sm={2} md={2} lg={4} className="g-4">
             {propertyInfo &&
@@ -90,9 +90,9 @@ const PropertyList = () => {
                 </Col>
               ))}
           </Row>
-        </>
+        </ div>
       ) : (
-        <>
+        <div className="spacesList">
           <h2 style={{ width: "100%" }}>Our Vacation Spaces</h2>
           <p className="para" style={{ width: "100%" }}>
             You can only view spaces now. To book a space, please{" "}
@@ -117,9 +117,9 @@ const PropertyList = () => {
                 </Col>
               ))}
           </Row>
-        </>
+        </ div>
       )}
-    </>
+    </div>
   );
 };
 

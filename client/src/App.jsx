@@ -13,7 +13,7 @@ import Login from "./pages/Login";
 import Propertylist from "./components/PropertyList";
 import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
-import Landing from "./pages/Landing";
+import Home from "./pages/Home";
 
 
 const httpLink = createHttpLink({
@@ -43,13 +43,12 @@ function App() {
       <Router>
       <div className="flex-column justify-flex-start min-100-vh">
       <Header />
-          <div className="container">
+          <div>
             <Routes>
             <Route 
                 path="/" 
-                element={<Landing />} 
+                element={<Home/>} 
               />
-
             <Route 
                 path="/spaces" 
                 element={<Propertylist />} 
