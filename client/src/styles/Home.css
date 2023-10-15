@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  padding-top: 100px;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)),
+    url(../assets/images/background.jpg);
+  background-size: cover;
+}
+.logo {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.main h2 {
+  font-size: 100px;
+  font-family: "Sacramento", cursive;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  display: flex;
+  z-index: 9;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+}
+
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .main h2 {
+    font-size: 30px !important;
+  }
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+  .main h2 {
+    font-size: 50px !important;
+  }
+}
+
+/* Media query for screens with a minimum width of 600px */
+@media only screen and (min-width: 600px) {
+  .main h2 {
+    font-size: 50px !important;
+  }
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  .main h2 {
+    font-size: 90px !important;
+  }
+}
+
+/* Media query for screens with a minimum width of 992px */
+@media only screen and (min-width: 992px) {
+  .main h2 {
+    font-size: 90px !important;
+  }
+}
+
+/* Media query for screens with a minimum width of 1200px */
+@media only screen and (min-width: 1200px) {
+  .main h2 {
+    font-size: 100px !important;
+  }
+}
+
+.main button {
+  font-size: 40px;
+  border-radius: 50px;
+  color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .main button {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .main button {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main button {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main button {
+    font-size: 40px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main button {
+    font-size: 40px !important;
+  }
+}
+
+.button {
+  background-color: #952121 !important;
+  color: white !important;
+  border: none !important;
+  font-family: "Poppins" !important;;
+  width: fit-content;
+  padding: 20px !important;
+  margin: 20px !important;
+}
+
+.button:hover{
+  background-color: #b23c3c !important;
+}
+
+.button:active{
+  background-color: #ce4747 !important;
+}
+
+.main h2:nth-child(2) {
+  margin-top: 60px;
+  z-index: 9;
+}

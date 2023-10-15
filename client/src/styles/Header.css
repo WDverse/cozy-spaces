@@ -20,20 +20,6 @@
   background-color: #e48111 !important;
 }
 
-.nav-link.active:hover {
-  background-color: #f0a44d !important;
-}
-
-.nav-link.active:active {
-  background-color: #f3b46d !important;
-}
-
-.navbar-expand-lg .navbar-collapse {
-  /* display: flex!important; */
-  flex-basis: auto;
-  padding-left: 30px !important;
-}
-
 a {
   color: rgb(0, 0, 0) !important;
   text-decoration: none !important;

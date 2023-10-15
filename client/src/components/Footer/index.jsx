@@ -6,10 +6,10 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
+    <>
+        {location.pathname !== "/" && (
     <footer className="w-100 mt-auto bg-white p-4">
       <div className="container text-center mb-2">
-        {location.pathname !== "/" && (
-          <>
           <button className="btn btn-dark mb-3 footerBtn" onClick={() => navigate(-1)}>
             <span>
               <svg
@@ -28,10 +28,10 @@ const Footer = () => {
             Go Back
           </button>
           <h4>© 2023 The Cozy Coders</h4>
-          </>
-        )}
       </div>
     </footer>
+    )}
+    </>
   );
 };
 
