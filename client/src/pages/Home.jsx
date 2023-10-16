@@ -16,22 +16,6 @@ export default function Home() {
         opacity: 0,
         stagger: 0.3,
       });
-
-      tl.from(".main>img", {
-        scale: 0,
-        opacity: 0,
-        stagger: 0.6,
-      });
-      tl.from("h5", {
-        scale: 0,
-        opacity: 0,
-      });
-      tl.to("h5", {
-        y: 30,
-        repeat: -1,
-        duration: 0.7,
-        yoyo: true,
-      });
     }, about);
 
     return () => ctx.revert();
@@ -46,7 +30,7 @@ export default function Home() {
             width="70"
             height="70"
             fill="currentColor"
-            class="bi bi-house-heart"
+            className="bi bi-house-heart"
             viewBox="0 0 16 16"
           >
             <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982Z" />

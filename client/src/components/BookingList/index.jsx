@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OrderList = () => {
+const BookingList = () => {
 
     return(
         <>
@@ -9,4 +9,4 @@ const OrderList = () => {
 
 }
 
-export default OrderList;
+export default BookingList;
