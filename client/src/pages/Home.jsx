@@ -16,12 +16,6 @@ export default function Home() {
         opacity: 0,
         stagger: 0.3,
       });
-
-      tl.from(".main>img", {
-        scale: 0,
-        opacity: 0,
-        stagger: 0.6,
-      });
       tl.from("h5", {
         scale: 0,
         opacity: 0,
