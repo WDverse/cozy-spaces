@@ -48,7 +48,7 @@ const SignUp = () => {
       </div>
       {data ? (
         <p>
-          Success! You may now head <Link to="/">back to the homepage.</Link>
+          Success! You may now head <Link to="/spaces">back to book a space.</Link>
         </p>
       ) : (
         <div className="form-box">
