@@ -1,23 +1,28 @@
-*, :before, :after {
+/* Resetting padding, margin, and box-sizing for all elements, pseudo-elements :before and :after */
+*,
+:before,
+:after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Styling for the body element */
 body {
   background-color: white;
 }
 
+/* Styling for the element with class "box" */
 .box {
   position: absolute;
   width: 430px;
   height: 520px;
-  /* border: 2px solid #fff; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
+/* Styling for elements with the "circle" class within the element with class "box" */
 .box .circle {
   position: absolute;
   height: 200px;
@@ -25,6 +30,7 @@ body {
   border-radius: 50%;
 }
 
+/* Styling for the first element within the element with class "circle" */
 .circle:nth-child(1) {
   background: linear-gradient(#043f46, #0baabc);
   margin-top: 50px;
@@ -33,6 +39,7 @@ body {
 }
 
 
+/* Media query for the first element within the element with class "circle" for screens with a maximum width of 480px */
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
   .circle:nth-child(1) {
     margin-top: 220px !important;
@@ -42,9 +49,9 @@ body {
   }
 }
 
-/* Media query for screens with a maximum width of 600px */
+/* Media query for the first element within the element with class "circle" for screens with a maximum width of 600px */
 @media only screen and (max-width: 600px) {
-  .circle:nth-child(1){
+  .circle:nth-child(1) {
     margin-top: 220px !important;
     width: 120px;
     height: 120px;
@@ -52,43 +59,44 @@ body {
   }
 }
 
-/* Media query for screens with a minimum width of 600px */
+/* Media query for the first element within the element with class "circle" for screens with a minimum width of 600px */
 @media only screen and (min-width: 600px) {
-  .circle:nth-child(1){
+  .circle:nth-child(1) {
     margin-top: 120px !important;
-  
+
   }
 }
 
-/* Media query for screens with a minimum width of 768px */
+/* Media query for the first element within the element with class "circle" for screens with a minimum width of 768px */
 @media only screen and (min-width: 768px) {
-  .circle:nth-child(1){
-    margin-top:  120px !important;
+  .circle:nth-child(1) {
+    margin-top: 120px !important;
 
   }
 }
 
-/* Media query for screens with a minimum width of 992px */
+/* Media query for the first element within the element with class "circle" for screens with a minimum width of 992px */
 @media only screen and (min-width: 992px) {
-  .circle:nth-child(1){
-    margin-top:  60px !important;
+  .circle:nth-child(1) {
+    margin-top: 60px !important;
   }
 }
 
-/* Media query for screens with a minimum width of 1200px */
+/* Media query for the first element within the element with class "circle" for screens with a minimum width of 1200px */
 @media only screen and (min-width: 1200px) {
-  .circle:nth-child(1){
-    margin-top:  60px !important;
+  .circle:nth-child(1) {
+    margin-top: 60px !important;
   }
 }
 
-
+/* Styling for the second element within the element with class "circle" */
 .circle:nth-child(2) {
   background: linear-gradient(to right, #ff512f, #f09819);
   right: -80px;
   bottom: -150px;
 }
 
+/* Media query for the second element within the element with class "circle" for screens with a maximum width of 480px */
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
   .circle:nth-child(2) {
     bottom: -130px !important;
@@ -98,9 +106,9 @@ body {
   }
 }
 
-/* Media query for screens with a maximum width of 600px */
+/* Media query for the second element within the element with class "circle" for screens with a maximum width of 600px */
 @media only screen and (max-width: 600px) {
-  .circle:nth-child(2){
+  .circle:nth-child(2) {
     bottom: -130px !important;
     width: 120px;
     height: 120px;
@@ -108,43 +116,46 @@ body {
   }
 }
 
-/* Media query for screens with a minimum width of 600px */
+/* Media query for the second element within the element with class "circle" for screens with a minimum width of 600px */
 @media only screen and (min-width: 600px) {
-  .circle:nth-child(2){
+  .circle:nth-child(2) {
     bottom: -230px !important;
-  
+
   }
 }
 
-/* Media query for screens with a minimum width of 768px */
+/* Media query for the second element within the element with class "circle" for screens with a minimum width of 768px */
 @media only screen and (min-width: 768px) {
-  .circle:nth-child(2){
-    bottom:  -230px !important;
+  .circle:nth-child(2) {
+    bottom: -230px !important;
 
   }
 }
 
-/* Media query for screens with a minimum width of 992px */
+/* Media query for the second element within the element with class "circle" for screens with a minimum width of 992px */
 @media only screen and (min-width: 992px) {
-  .circle:nth-child(2){
-    bottom:  -160px !important;
-  }
-}
-
-/* Media query for screens with a minimum width of 1200px */
-@media only screen and (min-width: 1200px) {
-  .circle:nth-child(2){
+  .circle:nth-child(2) {
     bottom: -160px !important;
   }
 }
 
+/* Media query for the second element within the element with class "circle" for screens with a minimum width of 1200px */
+@media only screen and (min-width: 1200px) {
+  .circle:nth-child(2) {
+    bottom: -160px !important;
+  }
+}
+
+/* Center the .form-box container using the grid layout and place-items */
 .form-box {
   display: grid;
   place-items: center;
   min-height: 100vh;
 }
 
+/* Styling for the form element */
 form {
+  /* Set the position to absolute */
   position: absolute;
   width: 400px;
   height: 520px;
@@ -156,14 +167,15 @@ form {
   padding: 50px 35px;
 }
 
+/* Responsive styling for the form element for screens with a maximum width of 600px */
 @media only screen and (max-width: 600px) {
-  form{
+  form {
     width: 300px !important;
     height: 400px !important;
   }
 }
 
-
+/* Apply styles to all form elements */
 form * {
   font-family: "Poppins";
   color: black;
@@ -172,13 +184,15 @@ form * {
   border: none;
 }
 
-form > h3 {
+/* Styling for the h3 element where the parent is a form element */
+form>h3 {
   font-size: 32px;
   font-weight: 500;
   line-height: 42px;
   text-align: center;
 }
 
+/* Styling for labels within the form */
 label {
   display: block;
   margin-top: 30px;
@@ -186,6 +200,7 @@ label {
   font-weight: 500;
 }
 
+/* Styling for input elements within the form */
 input {
   display: block;
   height: 50px;
@@ -198,10 +213,12 @@ input {
   font-weight: 300;
 }
 
+/* Styling for input placeholders */
 input::placeholder {
   color: #e5e5e5;
 }
 
+/* Styling for buttons within the form */
 button {
   margin-top: 50px;
   width: 100%;
@@ -213,4 +230,3 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-

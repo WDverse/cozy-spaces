@@ -1,5 +1,9 @@
+// Import 'AuthenticationError' from the 'apollo-server-express' library.
 const { AuthenticationError } = require('apollo-server-express');
+
+// Import the 'User' and 'Location' models from the '../models' directory.
 const { User, Location } = require('../models');
+
 
 const { signToken } = require('../utils/auth');
 // import required deconstructed assets.

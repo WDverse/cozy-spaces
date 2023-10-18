@@ -1,3 +1,6 @@
-.footerBtn{
+/* CSS style for elements with the "footerBtn" class */
+.footerBtn {
+    /* Set the width to fit its content and prevent unnecessary expansion */
     width: fit-content !important;
+    /* override other styles with !important */
 }

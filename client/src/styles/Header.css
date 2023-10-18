@@ -1,3 +1,4 @@
+/* Styling for the "navbar-brand" class*/
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
   padding-bottom: var(--bs-navbar-brand-padding-y);
@@ -7,24 +8,31 @@
   text-decoration: none;
   white-space: nowrap;
 }
+
+/* Styling for elements with the "brand" class */
 .brand {
   font-size: 30px !important;
 }
 
+/* Styling for elements with the "nav-link" class */
 .nav-link {
+  /* Remove underlines from navigation links and override other styles with !important */
   text-decoration: none !important;
 }
 
+/* Styling for active navigation links */
 .nav-link.active {
   color: rgb(0, 0, 0) !important;
   background-color: #e48111 !important;
 }
 
+/* Styling for all links (<a> elements) */
 a {
   color: rgb(0, 0, 0) !important;
   text-decoration: none !important;
 }
 
+/* Styling for elements with the "navLink" class */
 .navLink {
   text-decoration: none !important;
   color: #000000 !important;

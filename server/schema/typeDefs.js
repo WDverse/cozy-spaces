@@ -1,4 +1,6 @@
+// Import the 'gql' function from the 'apollo-server-express' library.
 const { gql } = require('apollo-server-express');
+
 //Describes the data of our graphQL API
 const typeDefs = gql`
 type Location { 

@@ -1,9 +1,11 @@
+/* Apply styles to all HTML elements by resetting margin, padding, and box-sizing */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* Styling for element with "main" class*/
 .main {
   padding-top: 100px;
   min-height: 100vh;
@@ -12,6 +14,8 @@
     url(../assets/images/background.jpg);
   background-size: cover;
 }
+
+/* Styling for element with "logo" class*/
 .logo {
   color: white;
   text-align: center;
@@ -19,10 +23,12 @@
   margin-bottom: 100px;
 }
 
+/* Styling for element with "icon" class*/
 .icon {
   padding-right: 10px;
 }
 
+/* Styling for the h2 elements within the element with "main" class */
 .main h2 {
   font-size: 100px;
   font-family: "Sacramento", cursive;
@@ -36,102 +42,119 @@
   color: white;
 }
 
-
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
+/* Media query for the h2 elements within the element with "main" class for screens with a maximum width of 480px */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
   .main h2 {
-    font-size: 30px !important;
+    font-size: 20px !important;
   }
 }
 
-/* Media query for screens with a maximum width of 600px */
+/* Media query for the h2 elements within the element with "main" class for screens with a maximum width of 600px */
 @media only screen and (max-width: 600px) {
   .main h2 {
     font-size: 50px !important;
   }
 }
 
-/* Media query for screens with a minimum width of 600px */
+/* Media query for the h2 elements within the element with "main" class for screens with a minimum width of 600px */
 @media only screen and (min-width: 600px) {
   .main h2 {
     font-size: 50px !important;
   }
 }
 
-/* Media query for screens with a minimum width of 768px */
+/* Media query for the h2 elements within the element with "main" classfor screens with a minimum width of 768px */
 @media only screen and (min-width: 768px) {
   .main h2 {
     font-size: 90px !important;
   }
 }
 
-/* Media query for screens with a minimum width of 992px */
+/* Media query for the h2 elements within the element with "main" class for screens with a minimum width of 992px */
 @media only screen and (min-width: 992px) {
   .main h2 {
     font-size: 90px !important;
   }
 }
 
-/* Media query for screens with a minimum width of 1200px */
+/* Media query for the h2 elements within the element with "main" class for screens with a minimum width of 1200px */
 @media only screen and (min-width: 1200px) {
   .main h2 {
     font-size: 100px !important;
   }
 }
 
+/* Styling for buttons within element with class "main" */
 .main button {
   font-size: 40px;
   border-radius: 50px;
   color: aliceblue;
 }
 
+/* Media query for buttons within element with class "main" for screens with a maximum width of 480px */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .main button {
+    font-size: 10px !important;
+  }
+}
+
+/* Media query for buttons within element with class "main" for screens with a maximum width of 600px */
 @media only screen and (max-width: 600px) {
   .main button {
     font-size: 20px !important;
   }
 }
 
+/* Media query for buttons within element with class "main" for screens with a minimum width of 600px */
 @media only screen and (min-width: 600px) {
   .main button {
     font-size: 20px !important;
   }
 }
 
+/* Media query for buttons within element with class "main" for screens with a minimum width of 768px */
 @media only screen and (min-width: 768px) {
   .main button {
     font-size: 30px !important;
   }
 }
 
+/* Media query for buttons within element with class "main" for screens with a minimum width of 992px */
 @media only screen and (min-width: 992px) {
   .main button {
     font-size: 40px !important;
   }
 }
 
+/* Media query for buttons within element with class "main" for screens with a minimum width of 1200px */
 @media only screen and (min-width: 1200px) {
   .main button {
     font-size: 40px !important;
   }
 }
 
+/* Styling for elements with the "button" class */
 .button {
   background-color: #952121 !important;
   color: white !important;
   border: none !important;
-  font-family: "Poppins" !important;;
+  font-family: "Poppins" !important;
   width: fit-content;
   padding: 20px !important;
   margin: 20px !important;
 }
 
-.button:hover{
+/* Styling for elements with the "button" class when hovered */
+.button:hover {
   background-color: #b23c3c !important;
 }
 
-.button:active{
+/* Styling for elements with the "button" class when clicked */
+.button:active {
   background-color: #ce4747 !important;
 }
 
+/* Styling for the second h2 element within the element with class "main" */
 .main h2:nth-child(2) {
   margin-top: 60px;
   z-index: 9;
