@@ -33,16 +33,16 @@ class AuthService {
   login(idToken) {
     // Store the token in local storage
     localStorage.setItem('id_token', idToken);
-    // Redirect the user to the '/spaces' page when logged in
-    window.location.assign('/spaces');
+    // Redirect the user to the '/' page when logged in
+    window.location.assign('/');
   }
 
   // Method to log out the user
   logout() {
     // Remove the token from local storage
     localStorage.removeItem('id_token');
-    // Redirect the user to the '/login' page when logged out
-    window.location.assign('/login');
+    // Redirect the user to the '/' page when logged out
+    window.location.assign('/');
   }
 }
 
