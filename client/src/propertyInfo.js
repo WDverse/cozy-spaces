@@ -1,3 +1,4 @@
+// Import images
 import beachHouse from "./assets/images/beachHouse.jpg";
 import santiagoHome from "./assets/images/Santiagohome.jpg";
 import lightHouse from "./assets/images/AucklandLighthouse.jpg";
@@ -7,14 +8,15 @@ import maldivesOverwater from "./assets/images/maldives.jpg";
 import newYorkApt from "./assets/images/NewYorkApartment.jpg";
 import texasRanch from "./assets/images/TexasRanch.jpg";
 
+// Create an array of property information
 export const propertyInfo = [
   {
-    id: 1,
-    image: beachHouse,
-    location: "Miami Beach House",
-    price: "$400 per day",
-    status: "Rented",
-    stripeLink: "https://buy.stripe.com/test_8wM2aKdzDfVN13y7sF",
+    id: 1, // Property ID
+    image: beachHouse, // Property image
+    location: "Miami Beach House", // Location description
+    price: "$400 per day", // Price per day
+    status: "Rented", // Rental status
+    stripeLink: "https://buy.stripe.com/test_8wM2aKdzDfVN13y7sF", // Stripe payment link
   },
   {
     id: 2,

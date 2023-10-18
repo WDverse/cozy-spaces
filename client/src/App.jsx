@@ -7,67 +7,68 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from "./components/Header";
-import SignUp from "./pages/Signup";
-import Login from "./pages/Login";
-import Propertylist from "./components/PropertyList";
-import Profile from "./pages/Profile";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-
+import Header from "./components/Header";  // Importing the Header component
+import SignUp from "./pages/Signup";       // Importing the Signup page component
+import Login from "./pages/Login";         // Importing the Login page component
+import Propertylist from "./components/PropertyList";  // Importing the PropertyList component
+import Profile from "./pages/Profile";     // Importing the Profile page component
+import Footer from "./components/Footer";  // Importing the Footer component
+import Home from "./pages/Home";           // Importing the Home page component
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "/graphql", // URI of the GraphQL server endpoint
 });
 
+
 const authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
+  // Get the authentication token from local storage if it exists
   const token = localStorage.getItem("id_token");
-  // return the headers to the context so httpLink can read them
+  // Return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: token ? `Bearer ${token}` : "", // Set the "Authorization" header with the token
     },
   };
 });
 
 const client = new ApolloClient({
   // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
+  link: authLink.concat(httpLink), // Combines the authentication link and the HTTP link
+  cache: new InMemoryCache(),      // Initializes an in-memory cache for Apollo Client
 });
-function App() {
+
+const App = () => {
   return (
     <ApolloProvider client={client}>
       <Router>
-      <div className="flex-column justify-flex-start min-100-vh">
-      <Header />
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header /> {/* Render the application header */}
           <div>
             <Routes>
-            <Route 
-                path="/" 
-                element={<Home/>} 
+              <Route
+                path="/"
+                element={<Home />} // Render the Home component when the path is "/"
               />
-            <Route 
-                path="/spaces" 
-                element={<Propertylist />} 
+              <Route
+                path="/spaces"
+                element={<Propertylist />} // Render the Propertylist component when the path is "/spaces"
               />
-              <Route 
-                path="/login" 
-                element={<Login />} 
+              <Route
+                path="/login"
+                element={<Login />} // Render the Login component when the path is "/login"
               />
-              <Route 
-                path="/signup" 
-                element={ <SignUp />} 
+              <Route
+                path="/signup"
+                element={<SignUp />} // Render the SignUp component when the path is "/signup"
               />
-              <Route 
-                path="/me" 
-                element={ <Profile />} 
+              <Route
+                path="/me"
+                element={<Profile />} // Render the Profile component when the path is "/me"
               />
             </Routes>
           </div>
-          <Footer/>
+          <Footer /> {/* Render the application footer */}
         </div>
       </Router>
     </ApolloProvider>

@@ -1,40 +1,44 @@
-
-h2{
+/* Styling for h2 elements */
+h2 {
     margin-top: 50px !important;
     margin-bottom: 30px !important;
-    
 }
 
-.para{
+/* Styling for elements with the "para" class */
+.para {
     margin-bottom: 30px;
 }
 
-.prop-link{
+/* Styling for links with the "prop-link" class */
+.prop-link {
     text-decoration: underline !important;
     color: #9f5500 !important;
 }
 
-.card-body{
+/* Styling for the "card-body" class */
+.card-body {
     background-color: #d4edfc;
 }
 
-.prop-buttons{
+/* Styling for buttons with the "prop-buttons" class */
+.prop-buttons {
     width: fit-content !important;
     background-color: #e48111 !important;
     border: none !important;
     color: black !important;
 }
-.prop-buttons:hover{
+
+/* Styling for buttons with the "prop-buttons" class when hovered */
+.prop-buttons:hover {
     background-color: #f0a44d !important;
 }
-.prop-buttons:active{
+
+/* Styling for buttons with the "prop-buttons" class when clicked */
+.prop-buttons:active {
     background-color: #f3b46d !important;
 }
-.closeBtn{
+
+/* Styling for buttons with the "closeBtn" class */
+.closeBtn {
     width: fit-content !important;
-
 }
-
-
-
-

@@ -1,4 +1,4 @@
-// Importing necessary styles and components
+// Import necessary styles and components
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
@@ -7,22 +7,24 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import "../styles/Login.css";
-// Define a functional component called SignUp
+
+// Define a functional component called Login
 const Login = (props) => {
+  // Initialize form state with email and password fields
   const [formState, setFormState] = useState({ email: "", password: "" });
+  // Use Apollo Client's useMutation hook to handle user login
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
-  // update state based on form input changes
+  // Function to update form state based on input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormState({
       ...formState,
       [name]: value,
     });
   };
 
-  // submit form
+  // Function to handle form submission
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -31,32 +33,35 @@ const Login = (props) => {
         variables: { ...formState },
       });
 
+      // Call the Auth.login method to store the user's authentication token
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
 
-    // clear form values
+    // Clear form values
     setFormState({
       email: "",
       password: "",
     });
   };
+
   return (
     <div>
       <div className="box">
         <div className="circle"></div>
         <div className="circle"></div>
       </div>
-      {data ? (
+      {data ? ( // If user login is successful
         <p>
-          Success! You may now head <Link to="/spaces">back to book a space.</Link>
+          Success! You may now head{" "}
+          <Link to="/spaces">back to book a space.</Link>
         </p>
       ) : (
         <div className="form-box">
           <Form style={{ width: "" }} onSubmit={handleFormSubmit}>
             <h3>Login</h3>
-            <Form.Group className=" form-input mb-3" controlId="login.email">
+            <Form.Group className="form-input mb-3" controlId="login.email">
               <Form.Control
                 type="email"
                 name="email"
@@ -82,12 +87,12 @@ const Login = (props) => {
           </Form>
         </div>
       )}
-      {error && (
+      {error && ( // If there is an error during login
         <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
       )}
     </div>
   );
 };
 
-// Export the SignUp component as the default export of this module
+// Export the Login component as the default export of this module
 export default Login;

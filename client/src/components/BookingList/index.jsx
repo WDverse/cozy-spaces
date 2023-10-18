@@ -1,12 +1,15 @@
-import React from 'react';
+// import React from 'react';
 
-const BookingList = () => {
+// const BookingList = () => {
 
-    return(
-        <>
-        </>
-    )
+//     return(
+//         <>
+//         </>
+//     )
 
-}
+// }
 
-export default BookingList;
+// export default BookingList;
+
+
+// Non-functional component

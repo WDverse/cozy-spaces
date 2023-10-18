@@ -1,3 +1,4 @@
+// Import necessary dependencies and styles for the Header component
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
@@ -6,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Auth from "../../utils/auth";
 import "../../styles/Header.css";
 
+// Define the Header component as a functional component
 const Header = () => {
   const location = useLocation();
   const logout = (event) => {
