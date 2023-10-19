@@ -2,9 +2,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+## Description  
+
+*Adventure Made Simple* 
+
+Here at Cozy Corners we pride ourselves, not only on hosting the more luxurious and adventuresome places to stay, but also that our services are easy to use and stressfree. With Stream line payment plans and picturesque locations, you've found the home of great getaway booking.  
+
 ## Table of Contents  
 
-- [Description](#description)  
 - [Installation](#installation)  
 - [Usage](#usage)
 - [License](#license)
@@ -13,13 +18,7 @@
 - [Credit](#credit)
 - [Questions](#questions)
 - [Deployment](#deployment)
-- [References](#references)
-
-## Description  
-
-*Adventure Made Simple* 
-
-Here at Cozy Corners we pride ourselves, not only on hosting the more luxurious and adventuresome places to stay, but also that our services are easy to use and stressfree. With Stream line payment plans and picturesque locations, you've found the home of great getaway booking.  
+- [References](#references)  
 
 ## Installation  
 
